@@ -17,7 +17,7 @@ configure_authtoken() {
   echo "Digite o seu authtoken ngrok:"
   read -r authtoken
   echo "Configurando authtoken..."
-  echo "authtoken: $authtoken" | sudo tee /etc/ngrok/ngrok.yml
+  ngrok config add-authtoken $authtoken
   echo "Authtoken configurado com sucesso!"
 }
 
